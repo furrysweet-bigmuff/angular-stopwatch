@@ -8,12 +8,12 @@ import { interval, timer, Subscription, Observable } from 'rxjs';
 })
 
 export class AppComponent {
-  public intervalSubscription: Subscription | null = null;
-  private timerSubscription: Subscription | null = null;
-  private intervallTimer = interval(1000);
-  private clickTimer: Observable<any> | null = null;
-  private count = 0;
   public minutesSeconds = '00:00';
+  public intervalSubscription: Subscription | null = null;
+  private intervallTimer: Observable<number> = interval(1000);
+  private clickTimer: Observable<number> | null = null;
+  private timerSubscription: Subscription | null = null;
+  private count:number = 0;
 
   stopInterval() {
     this.intervalSubscription!.unsubscribe();
