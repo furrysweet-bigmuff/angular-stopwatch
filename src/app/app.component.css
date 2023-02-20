@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.watch {
+  margin: -50px 0 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: #151538;
+  border-radius: 50%;
+  animation-name: shine;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+@keyframes shine{
+  0%,100%{
+      box-shadow: 0px 0px 32px -12px rgba(246, 180, 0, .5);
+  }
+  50%{
+      box-shadow: 0px 0px 32px 3px rgba(246, 180, 0, .5);
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+button {
+  padding: 10px 38px;
+  border: 1px solid #A9A9A9;
+  border-radius: 28px;
+  cursor: pointer;
+  background-color: #222242;
+  color: #fff;
+  transition: all .2s ease;
+  outline: 0;
+}
+
+button:hover,
+button:focus
+{
+    border-color: #F6B400;
+    color: #F6B400;
+    box-shadow: 0px 4px 27px -12px #F6B400;
+}
